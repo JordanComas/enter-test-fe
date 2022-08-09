@@ -1,38 +1,107 @@
-.App {
+.app {
+  background-color: #fff;
+}
+
+.arrow {
+  text-decoration: none;
+  font-size: 5vh;
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  color: black;
+  z-index: 1;
+}
+
+.arrow:hover {
+  color: blue;
+}
+
+.phone-details {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.all-phones {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.all-phones a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+.all-phones a:hover {
+  color: blue;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 0%;
+  height: 100vh;
+  width: 50vw;
+}
+
+.left-col p {
+  margin: 0%;
+}
+
+.left-col h4 {
+  margin: 2vh 0;
+}
+
+.image-details {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+}
+
+.left-col img {
+  height: 45vh;
+  width: 25vw;
+}
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  right: 0%;
+}
+
+.phone-section {
+  margin: 2vh 0;
+}
+
+/* Loader */
+:root {
+  --clr-body-bg: #fff;
+  --clr-loader-bg: blue;
+}
+
+.loader {
+  padding: 30px;
+  border: 10px solid var(--clr-loader-bg);
+  box-shadow: 0 0 5px 1px var(--clr-loader-bg);
+  border-right-color: var(--clr-body-bg);
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+@keyframes rotate {
+  100% {
     transform: rotate(360deg);
   }
 }
